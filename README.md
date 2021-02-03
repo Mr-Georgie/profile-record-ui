@@ -21,5 +21,8 @@ npm run build
 npm run lint
 ```
 
+### Hosted on heroku
+See live app (https://profile-record-ui.herokuapp.com/)
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
