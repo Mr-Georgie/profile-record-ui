@@ -1,4 +1,5 @@
-# vueapp
+# Profile Record UI
+made with VueJs
 
 ## Project setup
 ```

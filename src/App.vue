@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="wrapper">
+      <SideBar />
+      <Profiles />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Profiles from './components/Profiles.vue';
+import SideBar from './components/SideBar.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Profiles,
+    SideBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+/* @import './assets/css/bootstrap.min.css'; */
+@import './assets/css/light-bootstrap-dashboard.css?v=2.0.0';
+@import './assets/css/demo.css';
+
 </style>
