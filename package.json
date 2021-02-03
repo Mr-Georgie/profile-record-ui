@@ -1,6 +1,11 @@
 {
   "name": "vueapp",
   "version": "0.1.0",
+  "description": "made with VueJs",
+  "engines": {
+    "node": "14.15.4",
+    "npm": "6.14.10"
+   },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
