@@ -33,14 +33,14 @@
                         <div class="col-md-12" v-if="found">
                             <div class="alert alert-primary" role="alert">
                                 <button class="close" @click="closeAlert4">x</button>
-                                Nice !!! {{ foundRecord.length }} record(s) was found after searching through all the records.
+                                Search result: {{ foundRecord.length }} record(s) was found
                             </div>
                         </div>
                         <!-- shows the number of records that matched the entered text while filtering -->
                         <div class="col-md-12" v-if="filterFound">
                             <div class="alert alert-dark" role="alert">
                                 <button class="close" @click="closeAlert5">x</button>
-                                Okay !!! {{ countFilter.length }} records were found while filtering.
+                                Filter result: {{ countFilter.length }} records were found
                             </div>
                         </div>
                         <!-- If there was a connection error while making axios request to the records API  -->
@@ -100,12 +100,12 @@
                                         <!-- End Alert -->
 
                                         <!-- if the axios request was successfully, display data in table -->
-                                        <div class="table-responsive table-striped" style="height:300px" v-else>
-                                            <table class="table table-bordered"> <!-- table-sm -->
+                                        <div class="table-responsive table-striped table-hover" style="height:300px" v-else>
+                                            <table class="table"> <!-- table-sm -->
                                                 <!-- table header -->
                                                 <thead class="">
                                                     <tr>
-                                                        <th scope="col" class="border-right">#</th>
+                                                        <th scope="col" class="">#</th>
                                                         <th scope="col">First Name</th>
                                                         <th scope="col">Last Name</th>
                                                         <th scope="col">Gender</th>
@@ -129,7 +129,7 @@
                                                 <tbody >
                                                     <!-- show record that match the user first or lastname entered -->
                                                     <tr v-for="profile in foundRecord" v-bind:key="foundRecord.indexOf(profile)">
-                                                        <th scope="row" class="border-right">{{ foundRecord.indexOf(profile)+1 }}</th>
+                                                        <th scope="row" class="">{{ foundRecord.indexOf(profile)+1 }}</th>
                                                         <td v-html="highlightMatches( profile.FirstName )"></td>
                                                         <td v-html="highlightMatches( profile.LastName )"></td>
                                                         <td v-html="highlightMatches( profile.Gender )"></td>
@@ -189,12 +189,12 @@
                                         <!-- End Alert -->
 
                                         <!-- if the axios request was successfully, display data in table -->
-                                        <div class="table-responsive table-striped" v-else>
-                                            <table class="table table-bordered"> <!-- table-sm -->
+                                        <div class="table-responsive table-striped table-hover" v-else>
+                                            <table class="table"> <!-- table-sm -->
                                                 <!-- table header -->
                                                 <thead class="">
                                                     <tr>
-                                                        <th scope="col" class="border-right">#</th>
+                                                        <th scope="col" class="">#</th>
                                                         <th scope="col">First Name</th>
                                                         <th scope="col">Last Name</th>
                                                         <th scope="col">Gender</th>
@@ -218,7 +218,7 @@
                                                 <tbody >
                                                     <!-- show record that match the filtered text entered -->
                                                     <tr v-for="profile in filtered" v-bind:key="profiles.indexOf(profile)">
-                                                        <th scope="row" class="border-right">{{ countFilter.indexOf(profile)+1 }}</th>
+                                                        <th scope="row" class="">{{ countFilter.indexOf(profile)+1 }}</th>
                                                         <td v-html="highlightMatches( profile.FirstName )"></td>
                                                         <td v-html="highlightMatches( profile.LastName )"></td>
                                                         <td v-html="highlightMatches( profile.Gender )"></td>
