@@ -1,5 +1,6 @@
 # Profile Record UI
-made with VueJs
+Enye Phase 1 - Assignment Front-end
+made with VueJs and Bootstrap
 
 ## Project setup
 ```
